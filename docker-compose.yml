@@ -1,0 +1,15 @@
+version: "4"
+
+services:
+  postgres-db:
+    container_name: postgres-db
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: demo_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - C:/Users/bayub/postgres:/var/lib/postgres/data
